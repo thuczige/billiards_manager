@@ -1,0 +1,25 @@
+services:
+  web:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    command: bash -c "rm -f tmp/pids/server.pid && rails server -b 0.0.0.0"
+    volumes:
+      - ".:/rails"
+    ports:
+      - "9000:3000"
+    depends_on:
+      - db
+    restart: always
+  db:
+    image: mysql:9.0.1
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: billiards_manager_development
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
