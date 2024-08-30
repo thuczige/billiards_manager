@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang=<%= I18n.default_locale %>>
   <head>
-    <title><%= content_for(:title) || "Billiards Manager" %></title>
+    <title><%= head_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="<%= t(".meta_description") %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= yield :head %>
-
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= yield :stylesheet %>
   </head>
-
   <body>
+    <%= render partial: "layouts/header" %>
+    <%= render partial: "layouts/banner" %>
+    <%= render partial: "layouts/actions" %>
     <%= yield %>
+    <%= render partial: "layouts/footer" %>
+    <%= javascript_importmap_tags %>
+    <%= yield :javascript %>
   </body>
 </html>

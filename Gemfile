@@ -6,6 +6,12 @@ gem "rails", "7.2.0"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", "3.5.2"
 
+# Integrate SassC-Ruby into Rails [https://github.com/sass/sassc-rails]
+gem "sassc-rails", "2.1.2"
+
+# Framework for developing responsive, mobile first projects on the web [https://github.com/twbs/bootstrap-rubygem]
+gem "bootstrap", "5.3.3"
+
 # Use mysql as the database for Active Record
 gem "mysql2", "0.5.6"
 
@@ -41,6 +47,9 @@ gem "bootsnap", "1.18.4", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# Manage multi-environment settings [https://rubygems.org/gems/config]
+gem "config", "5.5.1"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
