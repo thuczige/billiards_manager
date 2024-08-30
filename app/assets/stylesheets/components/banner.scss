@@ -1,0 +1,36 @@
+#banner {
+  height: 500px;
+  background-image: url("banner.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  h4 {
+    margin-bottom: 0;
+  }
+  ul {
+    list-style-type: "➢ ";
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 320px) and (max-width: 392px) {
+    height: 170px;
+    h2 {
+      font-size: 19px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 393px) and (max-width: 575px) {
+    height: 220px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    height: 270px;
+  }
+  @media screen and (min-width: 767px) and (max-width: 991px) {
+    height: 350px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    height: 430px;
+  }
+}

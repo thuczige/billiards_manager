@@ -1,0 +1,10 @@
+<div id="banner">
+  <div class="container">
+    <h2 class="text-white">
+      <%= content_for(:title).upcase || I18n.t("layouts.application.base_title") %>
+    </h2>
+    <h4 class="text-white">
+      <%= content_for(:description) || I18n.t("layouts.application.base_description").html_safe %>
+    </h4>
+  </div>
+</div>

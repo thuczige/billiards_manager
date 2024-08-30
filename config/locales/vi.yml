@@ -1,0 +1,14 @@
+vi:
+  layouts:
+    application:
+      base_title: Billiards Manager
+      base_description: <ul><li class="mb-3">Thiết kế thông minh</li><li class="mb-3">Giao diện thân thiện</li><li>Quản lý dễ dàng và hiệu quả</li
+      meta_description: Quản lý quán bida toàn diện với hệ thống của chúng tôi. Dễ dàng theo dõi bàn chơi, quản lý chi nhánh và nhân viên, kiểm soát chi phí rõ ràng và hiệu quả. Tối ưu hóa hoạt động kinh doanh của bạn.
+    header:
+      sign_in: Đăng nhập
+      sign_up: Đăng kí
+      price_list: Bảng giá
+      usage_guide: Hướng dẫn sử dụng
+  welcome:
+    index:
+      title: Hệ thống quản lý quán bida
