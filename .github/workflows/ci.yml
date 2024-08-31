@@ -60,7 +60,7 @@ jobs:
       mysql:
         image: mysql
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ROOT_PASSWORD: root
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
@@ -89,8 +89,10 @@ jobs:
           RAILS_ENV: test
           DATABASE_URL: mysql2://127.0.0.1:3306
           # REDIS_URL: redis://localhost:6379/0
-        run: bin/rails db:test:prepare test test:system
-        run: rspec
+        run: |
+          bin/rails db:test:prepare
+          bin/rails test test:system
+          bundle exec rspec
 
       - name: Keep screenshots from failed system tests
         uses: actions/upload-artifact@v4
