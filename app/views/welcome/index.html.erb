@@ -3,22 +3,27 @@
   <%= stylesheet_link_tag "pages/welcome-index" %>
 <% end %>
 <div id="welcome-index" class="container">
-  <h1 class="text-center my-3">TỔNG QUAN</h1>
+  <h2 class="text-center my-3">TỔNG QUAN</h1>
   <div class="p-4 summary-description rounded">
-    <h4>Hệ thống cung cấp đầy đủ các tính năng quản lý trong lĩnh vực bida</h4>
+    <h3 class="text-center mb-3"><%= t(".summary_description.title") %></h4>
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4">
         <ul>
-          <li>Quản lý chi nhánh</li>
-          <li>Quản lý bàn bida</li>
-          <li>Quản lý nhân sự</li>
+          <li><%= t(".summary_description.feature_one") %></li>
+          <li><%= t(".summary_description.feature_two") %></li>
+          <li><%= t(".summary_description.feature_three") %></li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <ul>
-          <li>Tổng kết thu nhập</li>
-          <li>Thống kê thu chi</li>
-          <li>Các chức năng khác</li>
+          <li><%= t(".summary_description.feature_four") %></li>
+          <li><%= t(".summary_description.feature_five") %></li>
+          <li><%= t(".summary_description.feature_six") %></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <ul>
+          <li><%= t(".summary_description.feature_seven") %></li>
         </ul>
       </div>
     </div>

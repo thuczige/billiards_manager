@@ -1,4 +1,20 @@
 #footer {
   margin-top: 1rem;
   border-top: 2px solid #5ABBF3;
+  padding: 1rem 0;
+  .info {
+    color: #495057;
+  }
+  .nav-link {
+    color: #495057;
+    &:hover {
+      color: #0D6EFD;
+    }
+  }
+  .active {
+    color: #0D6EFD;
+  }
+  .copyright {
+    color: #495057;
+  }
 }
