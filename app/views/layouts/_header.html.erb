@@ -4,19 +4,19 @@
       <ul class="nav justify-content-end align-items-center">
         <li class="nav-item">
           <%= link_to "https://www.facebook.com/profile.php?id=100012298714802", class: "nav-link", target: "_blank" do %>
-            <%= image_tag "facebook", alt: "facebook", height: 24 %>
+            <%= image_tag "facebook.svg", alt: "facebook", width: 24, height: 24 %>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to "#", class: "nav-link", target: "_blank" do %>
-            <%= image_tag "zalo", alt: "zalo", height: 24 %>
+            <%= image_tag "zalo.svg", alt: "zalo", width: 25, height: 24 %>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to "0327486020", "tel:0327486020", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><%= image_tag "vietnam", alt: "vi" %></a>
+          <a class="nav-link" href="#"><%= image_tag "vietnam-flag.webp", alt: "lang-vi", width: 36, height: 24 %></a>
         </li>
       </ul>
     </div>
@@ -24,9 +24,9 @@
   <nav class="navbar navbar-expand-sm sticky-top p-0">
     <div class="container">
       <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag "logo", alt: "logo", height: 60 %>
+        <%= image_tag "logo.png", alt: "logo", width: 127, height: 40 %>
       <% end %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-links">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-links" aria-label="Toggle Button">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="header-links">

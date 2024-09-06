@@ -9,6 +9,22 @@ vi:
       sign_up: Đăng kí
       price_list: Bảng giá
       usage_guide: Hướng dẫn sử dụng
+    footer:
+      homepage: Trang chủ
+      sign_in: Đăng nhập hệ thống
+      sign_up: Đăng kí dùng thử
+      price_list: Xem bảng giá chi tiết
+      usage_guide: Hướng dẫn sử dụng
+      copyright: "&copy; Copyright %{year}"
   welcome:
     index:
       title: Hệ thống quản lý quán bida
+      summary_description:
+        title: Hệ thống cung cấp các tính năng quản lý trong lĩnh vực bida
+        feature_one: Quản lý chi nhánh
+        feature_two: Quản lý bàn bida
+        feature_three: Quản lý nhân sự
+        feature_four: Quản lý xuất nhập kho
+        feature_five: Tổng kết thu nhập
+        feature_six: Thống kê thu chi
+        feature_seven: Và một số tính năng khác
