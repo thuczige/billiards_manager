@@ -1,11 +1,11 @@
 <div id="actions" data-controller="actions">
   <div class="mb-3">
-    <%= link_to "#" do %>
+    <%= link_to Settings.contact.zalo do %>
       <%= image_tag "zalo.gif", width: 50, height: 50, alt: "zalo" %>
     <% end %>
   </div>
   <div class="mb-3">
-    <%= link_to "tel:0327486020" do %>
+    <%= link_to "tel:#{Settings.contact.phone}" do %>
       <%= image_tag "call.gif", width: 50, height: 50, alt: "call" %>
     <% end %>
   </div>
