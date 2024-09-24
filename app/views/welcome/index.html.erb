@@ -3,27 +3,27 @@
   <%= stylesheet_link_tag "pages/welcome-index" %>
 <% end %>
 <div id="welcome-index" class="container">
-  <h2 class="text-center my-3">TỔNG QUAN</h1>
+  <h2 class="text-center my-3"><%= t(".summary.title").upcase %></h1>
   <div class="p-4 summary-description rounded">
-    <h3 class="text-center mb-3"><%= t(".summary_description.title") %></h4>
+    <h3 class="text-center mb-3"><%= t(".summary.description") %></h4>
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4">
         <ul>
-          <li><%= t(".summary_description.feature_one") %></li>
-          <li><%= t(".summary_description.feature_two") %></li>
-          <li><%= t(".summary_description.feature_three") %></li>
+          <li><%= t(".summary.feature_one") %></li>
+          <li><%= t(".summary.feature_two") %></li>
+          <li><%= t(".summary.feature_three") %></li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <ul>
-          <li><%= t(".summary_description.feature_four") %></li>
-          <li><%= t(".summary_description.feature_five") %></li>
-          <li><%= t(".summary_description.feature_six") %></li>
+          <li><%= t(".summary.feature_four") %></li>
+          <li><%= t(".summary.feature_five") %></li>
+          <li><%= t(".summary.feature_six") %></li>
         </ul>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <ul>
-          <li><%= t(".summary_description.feature_seven") %></li>
+          <li><%= t(".summary.feature_seven") %></li>
         </ul>
       </div>
     </div>

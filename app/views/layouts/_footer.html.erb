@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       <%= link_to root_path do %>
-        <%= image_tag "logo", alt: "logo", width: 127, height: 40 %>
+        <%= image_tag "logo", alt: "logo", width: 135, height: 42.5 %>
       <% end %>
       <div class="col-sm-12 col-md-4 info">
-        <div class="my-3">CÔNG TY TNHH MTV</div>
-        <div class="mb-3">Địa chỉ: 102 Nguyễn Sinh Sắc, phường Hoà Khánh Nam, quận Liên Chiểu , TP.Đà Nẵng</div>
-        <div class="mb-3">Điện thoại: 0327 486 020</div>
+        <div class="my-3"><%= t(".info.title") %></div>
+        <div class="mb-3"><%= t(".info.address") %></div>
+        <div class="mb-3"><%= t(".info.phone", phone: Settings.contact.phone) %></div>
       </div>
       <div class="col-sm-6 col-md-4">
         <ul class="nav flex-column">
@@ -15,10 +15,10 @@
             <%= link_to t(".homepage"), root_path, class: "nav-link#{" active" if request.path == root_path}" %>
           </li>
           <li class="nav-item">
-            <%= link_to t(".sign_in"), "#", class: "nav-link" %>
+            <%= link_to t(".sign_in"), signin_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to t(".sign_up"), "#", class: "nav-link" %>
+            <%= link_to t(".sign_up"), signup_path, class: "nav-link" %>
           </li>
         </ul>
       </div>

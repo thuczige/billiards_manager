@@ -1,5 +1,6 @@
 module ApplicationHelper
-  def head_title
-    content_for(:title).present? ? "#{t(".base_title")} | #{content_for(:title)}" : t(".base_title")
+  def page_title
+    base_title = t("layouts.application.base_title")
+    content_for(:title).present? ? "#{base_title} | #{content_for(:title)}" : base_title
   end
 end

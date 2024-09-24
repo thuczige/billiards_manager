@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center align-items-center session-screen">
+  <div class="auth-form">
+    <div class="text-center">
+      <%= image_tag "login-logo.png", alt: "Login logo", width: 135, height: 55.5 %>
+    </div>
+    <%= form_with url: "/signin", scope: :session do |f| %>
+      <div class="mb-3 mt-5">
+        <strong>
+          <label class="form-label mb-1" for="session_username"><%= t(".username") %></label>
+          <span class="text-danger">*</span>
+        </strong>
+        <%= f.email_field :username, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <strong>
+          <label class="form-label mb-1" for="session_password"><%= t(".password") %></label>
+          <span class="text-danger">*</span>
+        </strong>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div class="d-grid mb-4">
+        <%= f.submit t(".signin"), class: "btn btn-block common-btn" %>
+      </div>
+    <% end %>
+    <div class="mb-3">
+      <%= link_to t(".forgot_password"), forgot_password_path %>
+    </div>
+    <div>
+      <%= link_to t(".signup"), signup_path %>
+    </div>
+  </div>
+</div>
