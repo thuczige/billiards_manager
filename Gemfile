@@ -49,7 +49,7 @@ gem "bootsnap", "1.18.4", require: false
 # gem "image_processing", "~> 1.2"
 
 # Manage multi-environment settings [https://rubygems.org/gems/config]
-gem "config", "5.5.1"
+gem "config", "5.5.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
