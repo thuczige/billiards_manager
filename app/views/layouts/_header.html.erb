@@ -24,7 +24,7 @@
   <nav class="navbar navbar-expand-sm sticky-top p-0">
     <div class="container">
       <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag "logo.png", alt: "logo", width: 127, height: 40 %>
+        <%= image_tag "logo.png", alt: "logo", width: 135, height: 42.5 %>
       <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-links" aria-label="toggleButton">
         <span class="navbar-toggler-icon"></span>
@@ -32,10 +32,10 @@
       <div class="collapse navbar-collapse" id="header-links">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <%= link_to t(".sign_in"), "#", class: "nav-link" %>
+            <%= link_to t(".sign_in"), signin_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to t(".sign_up"), "#", class: "nav-link" %>
+            <%= link_to t(".sign_up"), signup_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to t(".price_list"), "#", class: "nav-link" %>

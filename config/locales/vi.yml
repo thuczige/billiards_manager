@@ -33,3 +33,35 @@ vi:
         feature_five: Tổng kết thu nhập
         feature_six: Thống kê thu chi
         feature_seven: Và một số tính năng khác
+  auth:
+    session:
+      new:
+        username: Tên đăng nhập
+        password: Mật khẩu
+        signin: Đăng nhập
+        forgot_password: Quên mật khẩu
+        signup: Đăng ký
+    registration:
+      new:
+        email: Email
+        confirm: Xác nhận
+        signin: Đăng nhập
+        forgot_password: Quên mật khẩu
+        code: Mã xác thực
+        resend: Gửi lại mã xác thực
+        confirm_email: <i>Mã xác thực 6 chữ số đã được gửi đến địa chỉ email của bạn.</i><br/><i>Vui lòng nhập mã xác thực để tiếp tục.</i>
+        phone_number: Số điện thoại
+        name: Tên cửa hàng
+        confirm_phone_number: <i>Mã xác thực 6 chữ số đã được gửi đến số điện thoại của bạn.</i><br/><i>Vui lòng nhập mã xác thực để tiếp tục.</i>
+        username: Tên đăng nhập
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+    recoverable:
+      new:
+        email: Email
+        confirm: Đặt lại mật khẩu
+        signin: Đăng nhập
+        signup: Đăng ký
+      create:
+        close: Close
+        send_success: Yêu cầu lấy lại mật khẩu của bạn đã được gửi thành công.<br/>Nội dung đặt lại mật khẩu đã được gửi đến địa chỉ email của bạn.<br/>Vui lòng cập nhật mật khẩu mới trong vòng 1 giờ.<br/>Xin cảm ơn!
