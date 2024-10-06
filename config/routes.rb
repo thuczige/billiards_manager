@@ -9,6 +9,17 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
-  root "welcome#index"
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/, defaults: { locale: "vi" } do
+    # Defines the root path route ("/")
+    root "welcome#index"
+
+    get "signin" => "auth/session#new"
+    post "signin" => "auth/session#create"
+
+    get "signup" => "auth/registration#new"
+    post "signup" => "auth/registration#create"
+
+    get "forgot_password" => "auth/recoverable#new"
+    post "forgot_password" => "auth/recoverable#create"
+  end
 end

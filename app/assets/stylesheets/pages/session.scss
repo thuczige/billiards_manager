@@ -1,0 +1,21 @@
+.session-screen {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  .auth-form {
+    max-width: 500px;
+    width: 500px;
+    .common-btn {
+      background-color: #070544;
+      color: #FFFFFF;
+      transition: 0.3s;
+      &:hover {
+        background-color: #030128;
+        color: #FFFFFF;
+      }
+    }
+    .btn-w-200 {
+      width: 200px;
+    }
+  }
+}
