@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center session-screen">
+  <div class="auth-form">
+    <div class="text-center">
+      <%= image_tag "forgot-password-logo.png", alt: "Forgot password logo", width: 135, height: 56 %>
+    </div>
+    <div class="mt-5 mb-3 text-center">
+      <%= image_tag "check.png", alt: "Success logo", width: 100, height: 100 %>
+    </div>
+    <p class="text-center"><%= t(".send_success").html_safe %></p>
+    <div class="mt-4 text-center">
+      <%= link_to t(".close"), root_path, class: "btn common-btn btn-w-200" %>
+    </div>
+  </div>
+</div>

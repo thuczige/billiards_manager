@@ -1,0 +1,121 @@
+<div class="d-flex justify-content-center align-items-center session-screen">
+  <div class="auth-form">
+    <div class="text-center">
+      <%= image_tag "store-registration-logo.png", alt: "Store registration logo", width: 135, height: 55.5 %>
+    </div>
+    <% registration_session = session[:store_registration] %>
+    <%= form_with url: "/signup", scope: :store do |f| %>
+      <% if registration_session["email"].blank? || registration_session["email_verification_code"].blank? %>
+        <div class="mb-3 mt-5">
+          <strong>
+            <label class="form-label mb-1" for="store_email"><%= t(".email") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+      <% elsif registration_session["email_verified_at"].blank? %>
+        <div class="mb-3 mt-5">
+          <p><%= t(".confirm_email").html_safe %></p>
+          <strong>
+            <label class="form-label mb-1" for="store_email_verification_code"><%= t(".code") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :email_verification_code, class: "form-control" %>
+        </div>
+      <% elsif registration_session["phone_number"].blank? || registration_session["phone_number_verification_code"].blank? %>
+        <div class="mb-3 mt-5">
+          <strong>
+            <label class="form-label mb-1"><%= t(".email") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.email_field :email, class: "form-control", disabled: true %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1" for="store_phone_number"><%= t(".phone_number") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :phone_number, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1" for="store_name"><%= t(".name") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+      <% elsif registration_session["phone_number_verified_at"].blank? %>
+        <div class="mb-3 mt-5">
+          <p><%= t(".confirm_phone_number").html_safe %></p>
+          <strong>
+            <label class="form-label mb-1" for="store_phone_number_verification_code"><%= t(".code") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :phone_number_verification_code, class: "form-control" %>
+        </div>
+      <% elsif registration_session["phone_number_verified_at"].present? %>
+        <div class="mb-3 mt-5">
+          <strong>
+            <label class="form-label mb-1"><%= t(".email") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.email_field :email, class: "form-control", disabled: true %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1"><%= t(".phone_number") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :phone_number, class: "form-control", disabled: true %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1"><%= t(".name") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :name, class: "form-control", disabled: true %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1" for="store_username"><%= t(".username") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.text_field :username, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1" for="store_password"><%= t(".password") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <strong>
+            <label class="form-label mb-1" for="store_password_confirmation"><%= t(".password_confirmation") %></label>
+            <span class="text-danger">*</span>
+          </strong>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
+      <% end %>
+      <div class="d-grid mb-4">
+        <%= f.submit t(".confirm"), class: "btn btn-block common-btn" %>
+      </div>
+    <% end %>
+    <% if registration_session["email"].blank? || registration_session["email_verification_code"].blank? %>
+      <div class="mb-3">
+        <%= link_to t(".signin"), signin_path %>
+      </div>
+      <div>
+        <%= link_to t(".forgot_password"), forgot_password_path %>
+      </div>
+    <% elsif registration_session["email"].present? && registration_session["email_verification_code"].present? && registration_session["email_verified_at"].blank? %>
+      <div>
+        <%= link_to t(".resend"), signup_path(resend: 1) %>
+      </div>
+    <% elsif registration_session["phone_number"].present? && registration_session["phone_number_verification_code"].present? && registration_session["phone_number_verified_at"].blank? %>
+      <div>
+        <%= link_to t(".resend"), signup_path(resend: 2) %>
+      </div>
+    <% end %>
+  </div>
+</div>

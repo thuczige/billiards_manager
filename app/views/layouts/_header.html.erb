@@ -3,17 +3,17 @@
     <div class="container">
       <ul class="nav justify-content-end align-items-center">
         <li class="nav-item">
-          <%= link_to "https://www.facebook.com/profile.php?id=100012298714802", class: "nav-link", target: "_blank" do %>
+          <%= link_to Settings.contact.facebook, class: "nav-link", target: "_blank" do %>
             <%= image_tag "facebook.svg", alt: "facebook", width: 24, height: 24 %>
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to "#", class: "nav-link", target: "_blank" do %>
+          <%= link_to Settings.contact.zalo, class: "nav-link", target: "_blank" do %>
             <%= image_tag "zalo.svg", alt: "zalo", width: 25, height: 24 %>
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to "0327486020", "tel:0327486020", class: "nav-link" %>
+          <%= link_to Settings.contact.phone, "tel:#{Settings.contact.phone}", class: "nav-link" %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><%= image_tag "vietnam-flag.webp", alt: "lang-vi", width: 36, height: 24 %></a>
@@ -24,18 +24,18 @@
   <nav class="navbar navbar-expand-sm sticky-top p-0">
     <div class="container">
       <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag "logo.png", alt: "logo", width: 127, height: 40 %>
+        <%= image_tag "logo.png", alt: "logo", width: 135, height: 42.5 %>
       <% end %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-links" aria-label="Toggle Button">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-links" aria-label="toggleButton">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="header-links">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <%= link_to t(".sign_in"), "#", class: "nav-link" %>
+            <%= link_to t(".sign_in"), signin_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to t(".sign_up"), "#", class: "nav-link" %>
+            <%= link_to t(".sign_up"), signup_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to t(".price_list"), "#", class: "nav-link" %>

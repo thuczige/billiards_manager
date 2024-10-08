@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center session-screen">
+  <div class="auth-form">
+    <div class="text-center">
+      <%= image_tag "forgot-password-logo.png", alt: "Forgot password logo", width: 135, height: 56 %>
+    </div>
+    <%= form_with url: "/forgot_password", scope: :forgot_password do |f| %>
+      <div class="mb-3 mt-5">
+        <strong>
+          <label class="form-label mb-1" for="forgot_password_email"><%= t(".email") %></label>
+          <span class="text-danger">*</span>
+        </strong>
+        <%= f.email_field :email, class: "form-control" %>
+      </div>
+      <div class="d-grid mb-4">
+        <%= f.submit t(".confirm"), class: "btn btn-block common-btn" %>
+      </div>
+    <% end %>
+    <div class="mb-3">
+      <%= link_to t(".signin"), signin_path %>
+    </div>
+    <div>
+      <%= link_to t(".signup"), signup_path %>
+    </div>
+  </div>
+</div>
