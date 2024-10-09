@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  branch_id: 1
+  name: MyString
+  type: 
+  price_per_hour: 9.99
+  status: MyString
+
+two:
+  branch_id: 1
+  name: MyString
+  type: 
+  price_per_hour: 9.99
+  status: MyString

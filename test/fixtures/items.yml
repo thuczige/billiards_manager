@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  branch_id: 1
+  name: MyString
+  quantity: 1
+  unit_price: 9.99
+  unit: 1
+
+two:
+  branch_id: 1
+  name: MyString
+  quantity: 1
+  unit_price: 9.99
+  unit: 1
