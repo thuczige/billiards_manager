@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_24_150524) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_01_102714) do
+  create_table "bills", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "branch_id"
+    t.integer "table_id"
+    t.decimal "hourly_money", precision: 10
+    t.decimal "order_money", precision: 10
+    t.string "total_money"
+    t.float "discount"
+    t.decimal "final_money", precision: 10
+    t.string "payment_method"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "branches", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "store_id"
     t.integer "user_id"
