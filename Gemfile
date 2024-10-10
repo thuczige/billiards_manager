@@ -19,7 +19,7 @@ gem "mysql2", "0.5.6"
 gem "puma", "6.4.2"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails", "2.0.1"
+gem "importmap-rails", "2.0.3"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", "2.0.6"
