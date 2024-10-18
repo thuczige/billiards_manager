@@ -4,7 +4,6 @@ class CreateBranches < ActiveRecord::Migration[7.2]
       t.integer :store_id, null: false, foreign_key: true
       t.integer :address_id, null: false, foreign_key: true
       t.string :name
-      t.string :address
       t.string :phone_number
       t.int :status, default: 0
 

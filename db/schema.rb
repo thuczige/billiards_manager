@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_01_102714) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_18_110716) do
+  create_table "addresses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "country_id"
+    t.integer "prefecture_id"
+    t.integer "district_id"
+    t.integer "ward_id"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "bills", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "branch_id"
     t.integer "table_id"
@@ -89,6 +99,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_01_102714) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "settings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "unit"
+    t.string "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stores", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
@@ -113,6 +131,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_01_102714) do
     t.string "phone"
     t.string "password"
     t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "work_shifts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "shift_type"
+    t.string "hours"
+    t.decimal "salary", precision: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

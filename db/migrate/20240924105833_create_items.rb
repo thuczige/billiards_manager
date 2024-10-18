@@ -6,8 +6,6 @@ class CreateItems < ActiveRecord::Migration[7.2]
       t.integer :unit
       t.integer :quantity
       t.decimal :unit_price
-      
-
       t.timestamps
     end
   end
