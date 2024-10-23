@@ -344,7 +344,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (= 1.18.4)
   bootstrap (= 5.3.3)
-  brakeman (= 6.2.2)
+  brakeman
   capybara (= 3.40.0)
   config (= 5.5.1)
   debug (= 1.9.2)

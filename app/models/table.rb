@@ -1,11 +1,7 @@
 class Table < ApplicationRecord
   belongs_to :branch
 
-  enum type: {
-    pool: 0,
-    caroom: 1,
-    snooker: 2
-  }
+  enum type: { pool: 0, caroom: 1, snooker: 2 }
 
   enum status: {
     inactive: 0,

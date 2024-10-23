@@ -4,7 +4,7 @@ class CreateFeedbacks < ActiveRecord::Migration[7.2]
       t.integer :user_id
       t.integer :parent_id
       t.text :content
-      t.int :status, default: 0
+      t.integer :status, default: 0
 
       t.timestamps
     end

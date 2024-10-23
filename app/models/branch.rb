@@ -5,8 +5,5 @@ class Branch < ApplicationRecord
   has_many :tables
   has_many :members
 
-  enum status: {
-    active: 0,
-    closed: 1
-  }
+  enum status: { active: 0, closed: 1 }
 end
