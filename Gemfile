@@ -76,7 +76,7 @@ group :test do
   gem "selenium-webdriver", "4.23.0"
 
   # Testing framework for Rails [https://github.com/rspec/rspec-rails]
-  gem "rspec-rails", "6.1.4"
+  gem "rspec-rails", "7.0.1"
 
   # Mock objects when testing [https://github.com/thoughtbot/factory_bot_rails]
   gem "factory_bot_rails", "6.4.3"
