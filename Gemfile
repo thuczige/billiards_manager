@@ -16,7 +16,7 @@ gem "bootstrap", "5.3.3"
 gem "mysql2", "0.5.6"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "6.4.2"
+gem "puma", "6.4.3"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails", "2.0.1"
